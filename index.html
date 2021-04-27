@@ -3,14 +3,20 @@
         <title>
             OneClickShop
         </title>
-        <script src = "Widget.js"></script>
+        <script src = "js/Component.js"></script>
+        <script src = "js/Main.js"></script>
+        <script src = "js/OneClickPick.js"></script>
+        <script src = "js/Header.js"></script>
+        <script src = "js/Footer.js"></script>
+        <script src = "js/Container.js"></script>
         <script>
             function OnLoad()
             {
-
+                OneClickPick = new OneClickPick(document.getElementById("container"));
             }
         </script>
     </head>
-    <body onload = "OnLoad(e)">
+    <body onload = "OnLoad()">
+        <div id = "container"></div>
     </body>
 </html>
