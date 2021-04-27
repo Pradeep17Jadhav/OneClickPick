@@ -1,4 +1,4 @@
-class OneClickPick extends Main
+class Resume extends Main
 {
     constructor(parent)
     {

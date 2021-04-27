@@ -21,4 +21,9 @@ class Component
         this.childs.push(child);
         child.parent = this;
     }
+
+    AddClass(cls)
+    {
+        this.element.classList.add(cls);
+    }
 }
