@@ -6,7 +6,7 @@ class Resume extends Main
         this.header = new Header();
         this.AddChild(this.header);
 
-        this.container = new Container();
+        this.container = new Display();
         this.AddChild(this.container);
 
         this.footer = new Footer();

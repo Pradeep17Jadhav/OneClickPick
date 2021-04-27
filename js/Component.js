@@ -44,4 +44,14 @@ class Component
         this.height = height;
         this.element.style.height = height + "px";
     }
+
+    BackgroundImage(path)
+    {
+        this.element.style.backgroundImage = "url(" + path + ")";    
+    }
+
+    BackgroundAttachment(value)
+    {
+        this.element.style.backgroundAttachment = value;    
+    }
 }
