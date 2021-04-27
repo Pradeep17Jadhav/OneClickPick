@@ -26,4 +26,22 @@ class Component
     {
         this.element.classList.add(cls);
     }
+
+    Resize(width, height)
+    {
+        this.SetWidth(width);
+        this.SetHeight(height);
+    }
+
+    SetWidth(width)
+    {
+        this.width = width;
+        this.element.style.width = width + "px";
+    }
+
+    SetHeight(height)
+    {
+        this.height = height;
+        this.element.style.height = height + "px";
+    }
 }
