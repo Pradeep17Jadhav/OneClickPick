@@ -7,8 +7,7 @@ class Component
         
         this.element = document.createElement(element);
 
-        if(isAbsolute)
-            this.AddClass("box");
+        this.AddClass("box");
         this.visible = true;
         this.childs = [];
         this.left = 0;
@@ -66,9 +65,19 @@ class Component
         this.element.style.top = value + "px";
     }
 
+    SetFontSize(value)
+    {
+        this.element.style.fontSize = value;
+    }
+
     BackgroundImage(path)
     {
         this.element.style.backgroundImage = "url(" + path + ")";    
+    }
+    
+    BackgroundColor(color)
+    {
+        this.element.style.backgroundColor = color;    
     }
 
     BackgroundAttachment(value)
@@ -89,5 +98,10 @@ class Component
     GetHeight()
     {
         return this.height;
+    }
+
+    GetTop()
+    {
+        return this.top;
     }
 }

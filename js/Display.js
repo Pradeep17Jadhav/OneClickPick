@@ -3,34 +3,53 @@ class Display extends Component
     constructor()
     {
         super();
-        this.section1 = new Component(null, false);
-        this.section1.AddClass("section");
-        this.section1.BackgroundImage("images/section1.jpg");
-        this.section1.BackgroundAttachment("fixed");
+        this.introduction = new Component(null, false);
+        this.introduction.AddClass("section");
+        this.introduction.BackgroundImage("images/section1.jpg");
+        this.introduction.BackgroundAttachment("fixed");
 
-        this.name = new Component(null, true);
+        this.name = new Component("span", true);
         this.name.AddClass("sectionName");
         this.name.GetElement().innerHTML = "Pradeep Jadhav";
-        this.section1.AddChild(this.name);
-        this.AddChild(this.section1);
+        this.introduction.AddChild(this.name);
 
-        this.section2 = new Component(null, false);
-        this.section2.AddClass("section");
-        this.section2.BackgroundImage("images/section2.jpg");
-        this.AddChild(this.section2);
+        this.role = new Component("span", true);
+        this.role.AddClass("sectionRole");
+        this.role.GetElement().innerHTML = "Software Engineer";
+        this.introduction.AddChild(this.role);
+
+        this.AddChild(this.introduction);
+
+        this.aboutMe = new AboutMeSection();
+        this.AddChild(this.aboutMe);
+        
+        this.section3 = new Component(null, false);
+        this.section3.AddClass("section");
+        this.section3.BackgroundImage("images/section2.jpg");
+        this.AddChild(this.section3);
     }
 
     Resize(width, height)
     {
         let y = 0
-        this.section1.Resize(width, SizeConstants.SECTION_HEIGHT);
-        y += this.section1.GetWidth();
+        this.introduction.Resize(width, SizeConstants.SECTION_HEIGHT);
+        this.introduction.Place(0, y);
+        y += this.introduction.GetHeight();
 
-        this.section2.Resize(width, SizeConstants.SECTION_HEIGHT);
-        y += this.section2.GetWidth();
+        this.aboutMe.Resize(width, SizeConstants.SECTION_HEIGHT_ABOUT_ME);
+        this.aboutMe.Place(0, y);
+        y += this.aboutMe.GetHeight();
         
-        this.name.Resize(360, 200);
-        this.name.Place((this.section1.GetElement().clientHeight - 360) /2, (this.section1.GetElement().clientWidth - 200) /2);
+        this.name.Resize(width * 0.8, 100);
+        this.name.Place((this.introduction.GetElement().clientWidth - this.name.GetWidth()) / 2, (this.introduction.GetElement().clientHeight - this.name.GetHeight()) / 2);
+
+        this.role.Resize(width / 2, 60);
+        this.role.Place((this.introduction.GetElement().clientWidth - this.role.GetWidth()) / 2, (this.name.GetTop() + this.name.GetHeight() + CssConstants.PADDING6X));
+
+        this.section3.Resize(width, SizeConstants.SECTION_HEIGHT);
+        this.section3.Place(0, y);
+        y += this.section3.GetHeight();        
+
 
         super.Resize(width, y);
     }
