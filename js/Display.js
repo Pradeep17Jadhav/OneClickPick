@@ -22,6 +22,9 @@ class Display extends Component
 
         this.aboutMe = new AboutMeSection();
         this.AddChild(this.aboutMe);
+
+        this.certificateSection = new CertificateSection();
+        this.AddChild(this.certificateSection);
         
         this.section3 = new Component(null, false);
         this.section3.AddClass("section");
@@ -45,6 +48,10 @@ class Display extends Component
 
         this.role.Resize(width / 2, 60);
         this.role.Place((this.introduction.GetElement().clientWidth - this.role.GetWidth()) / 2, (this.name.GetTop() + this.name.GetHeight() + CssConstants.PADDING6X));
+
+        this.certificateSection.Resize(width, 650);
+        this.certificateSection.Place(0, y);
+        y += this.certificateSection.GetHeight();
 
         this.section3.Resize(width, SizeConstants.SECTION_HEIGHT);
         this.section3.Place(0, y);

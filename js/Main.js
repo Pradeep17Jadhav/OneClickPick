@@ -11,7 +11,7 @@ class Main extends Component
             {
                 this.Resize(this.parent.clientWidth, this.parent.clientHeight)
             }
-        }, 100)
+        }, 10);
     }
 
 }

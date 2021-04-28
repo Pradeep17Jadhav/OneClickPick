@@ -25,3 +25,7 @@ const CssClassConstants = {
    ABOUT_ME_TITLE: "aboutMeTitle",
    ABOUT_ME_DESCRIPTION: "aboutMeDescription"
 }
+
+const URLConstants = {
+    RESUME: "https://drive.google.com/file/d/1w3T9pSI5py8xm46BMs3aXQ3JzJpmknJD/view?usp=sharing"
+}

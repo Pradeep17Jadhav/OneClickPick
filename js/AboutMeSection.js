@@ -22,6 +22,9 @@ class AboutMeSection extends Component
 
         this.btn = new Component("button");
         this.btn.GetElement().innerHTML = "See Resume";
+        this.btn.GetElement().onpointerup = (e) => {
+            window.open(URLConstants.RESUME);
+        }
         this.AddChild(this.btn);
     }
 
