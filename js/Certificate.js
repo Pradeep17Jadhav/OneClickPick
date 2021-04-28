@@ -4,12 +4,10 @@ class Certificate extends Component
     {
         super();
         this.AddClass(CssClassConstants.CERTIFICATE);
-        
-        this.courseName = new Component("span");
-        this.AddChild(this.courseName);
 
-        this.platform = new Component("span");
-        this.AddChild(this.platform);
+        this.courseName = "";
+
+        this.platform = "";
     }
 
     Resize(width, height)
@@ -19,12 +17,12 @@ class Certificate extends Component
 
     SetCourseName(courseName)
     {
-        this.courseName.GetElement().innerHTML = courseName;
+        this.courseName = courseName;
     }
 
     SetPlatform(platform)
     {
-        this.platform.GetElement().innerHTML = platform;
+        this.platform = platform;
     }
 
     SetBackgroundImage(url)

@@ -1,5 +1,6 @@
 body {
     margin: auto;
+    transform: translateZ(0);
 }
 
 @font-face {
@@ -22,6 +23,7 @@ body {
     width: auto; 
     background-position: center center;
     background-size: cover;
+    transform: translateZ(-1px);
 }
 
 .sectionName {
@@ -71,9 +73,23 @@ button:hover {
     background-color: transparent;
     border: 2px solid #000;
     color: #000;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.certificateBox {
+    overflow: hidden;
 }
 
 .certificate {
     background-position: center center;
     background-size: cover;
+    -webkit-filter: grayscale(0);
+ 	transition:0.5s;
+
+}
+.certificate:hover { 
+  	-webkit-filter: grayscale(1);
+    transform:scale(1.10);
+ 	transition:0.5s;
 }
