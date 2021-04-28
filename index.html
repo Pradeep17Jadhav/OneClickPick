@@ -2,8 +2,11 @@
     <head>
         <title>Pradeep's Resume</title>
         <link rel="stylesheet" href = "css/style.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
         <script src = "js/Component.js"></script>
         <script src = "js/Main.js"></script>
+        <script src = "js/Constants.js"></script>
         <script src = "js/Resume.js"></script>
         <script src = "js/Header.js"></script>
         <script src = "js/Footer.js"></script>
@@ -11,11 +14,12 @@
         <script>
             function OnLoad()
             {
+                document.getElementById("container").clientWidth =
                 Resume = new Resume(document.getElementById("container"));
             }
         </script>
     </head>
     <body onload = "OnLoad()">
-        <div id = "container"></div>
+        <div id = "container" style = "height: 100vh;"></div>
     </body>
 </html>

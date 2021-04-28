@@ -1,11 +1,14 @@
 class Component
 {
-    constructor(element)
+    constructor(element, isAbsolute)
     {
         if(element == null)
             element = "div";
         
         this.element = document.createElement(element);
+
+        if(isAbsolute)
+            this.AddClass("box");
         this.visible = true;
         this.childs = [];
         this.left = 0;
@@ -33,6 +36,12 @@ class Component
         this.SetHeight(height);
     }
 
+    Place(left, top)
+    {
+        this.SetLeft(left);
+        this.SetTop(top);
+    }
+
     SetWidth(width)
     {
         this.width = width;
@@ -45,6 +54,18 @@ class Component
         this.element.style.height = height + "px";
     }
 
+    SetLeft(value)
+    {
+        this.left = value;
+        this.element.style.left = value + "px";
+    }
+
+    SetTop(value)
+    {
+        this.top = value;
+        this.element.style.top = value + "px";
+    }
+
     BackgroundImage(path)
     {
         this.element.style.backgroundImage = "url(" + path + ")";    
@@ -53,5 +74,20 @@ class Component
     BackgroundAttachment(value)
     {
         this.element.style.backgroundAttachment = value;    
+    }
+     
+    GetElement()
+    {
+        return this.element;
+    }
+
+    GetWidth()
+    {
+        return this.width;
+    }
+
+    GetHeight()
+    {
+        return this.height;
     }
 }
