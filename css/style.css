@@ -72,3 +72,8 @@ button:hover {
     border: 2px solid #000;
     color: #000;
 }
+
+.certificate {
+    background-position: center center;
+    background-size: cover;
+}

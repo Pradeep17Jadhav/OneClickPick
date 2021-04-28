@@ -3,7 +3,8 @@ class Certificate extends Component
     constructor()
     {
         super();
-
+        this.AddClass(CssClassConstants.CERTIFICATE);
+        
         this.courseName = new Component("span");
         this.AddChild(this.courseName);
 

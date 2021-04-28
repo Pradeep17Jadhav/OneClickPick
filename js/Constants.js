@@ -23,7 +23,8 @@ const FontSizeConstants = {
 
 const CssClassConstants = {
    ABOUT_ME_TITLE: "aboutMeTitle",
-   ABOUT_ME_DESCRIPTION: "aboutMeDescription"
+   ABOUT_ME_DESCRIPTION: "aboutMeDescription",
+   CERTIFICATE: "certificate"
 }
 
 const URLConstants = {
