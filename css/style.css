@@ -1,10 +1,9 @@
 body {
     margin: auto;
-    transform: translateZ(0);
 }
 
 @font-face {
-    font-family: 'Font1';
+    font-family: "Font1";
     src: url('..//resources/fonts/font1.ttf');
 }
 
@@ -15,7 +14,17 @@ body {
 .header { 
     background: #fff; 
     position: fixed;
+    box-shadow: 0px -5px 10px #000;
     z-index: 99;
+}
+
+.headerItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16;
+    cursor: pointer;
 }
 
 .section {
@@ -26,9 +35,16 @@ body {
     transform: translateZ(-1px);
 }
 
+.headerName {
+    font-family: "Calligraffitti", "sans-serif";
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 70px;
+}
+
 .sectionName {
-    font-family: 'Raleway', sans-serif;
-    font-size: 108;
+    font-family: "Raleway", "sans-serif";
+    font-size: 108px;
     font-weight: 700;
     color: #fff;
     text-align: center;
@@ -37,8 +53,8 @@ body {
 }
 
 .sectionRole {
-    font-family: 'Raleway', sans-serif;
-    font-size: 36;
+    font-family: "Raleway", "sans-serif";
+    font-size: 36px;
     font-weight: 300;
     color: #fff;
     text-align: center;
@@ -47,22 +63,23 @@ body {
 }
 
 .aboutMeTitle {
-    font-family: 'Font1', sans-serif;
+    font-family: "Font1", "sans-serif";
+    font-size: 36px;
     text-align: center;
     transition: 0.5s;
     line-height: 100%;
 }
 
 .aboutMeDescription {
-    font-family: 'Raleway', sans-serif;
-    font-size: 22;
+    font-family: "Raleway", "sans-serif";
+    font-size: 22px;
     text-align: center;
     transition: 0.5s;
     line-height: 150%;
 }
 
 button {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", "sans-serif";
     font-size: 18;
     transition: 0.5s;
     background-color: #000;

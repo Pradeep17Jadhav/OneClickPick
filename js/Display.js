@@ -60,4 +60,6 @@ class Display extends Component
 
         super.Resize(width, y);
     }
+
+ 
 }
