@@ -23,7 +23,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Raleway', sans-serif;
-    font-size: 16;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -80,7 +80,7 @@ body {
 
 button {
     font-family: "Raleway", "sans-serif";
-    font-size: 18;
+    font-size: 18px;
     transition: 0.5s;
     background-color: #000;
     border: 2px solid #000;
