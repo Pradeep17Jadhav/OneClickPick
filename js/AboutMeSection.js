@@ -33,11 +33,11 @@ class AboutMeSection extends Component
         super.Resize(width, height);
 
         let y = 50;
-        this.title.Resize(350, 50);
+        this.title.Resize(600, 50);
         this.title.Place((this.GetWidth() - this.title.GetWidth()) / 2, y);
         y += this.title.GetHeight() + CssConstants.PADDING3X;
         
-        this.description.Resize(350, 300);
+        this.description.Resize(600, 180);
         this.description.Place((this.GetWidth() - this.description.GetWidth()) / 2, y);
         y += this.description.GetHeight() + CssConstants.PADDING5X;
 

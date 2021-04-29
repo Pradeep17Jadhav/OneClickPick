@@ -22,18 +22,10 @@ class CertificateSection extends Component
         {
             if(width < 720)
             {
-                thumbnailWidth = width;
-                thumbnailHeight = thumbnailWidth / 1.4243;
-                this.listCertificateBox[i].Resize(thumbnailWidth, thumbnailHeight);
-                this.listCertificateBox[i].Place((width - this.listCertificateBox[i].GetWidth()) / 2, y);
-                y += this.listCertificateBox[i].GetHeight() + 10;
-            }
-            else if(width < 1080)
-            {
                 thumbnailWidth = width / 2;
                 thumbnailHeight = thumbnailWidth / 1.4243;
-
                 this.listCertificateBox[i].Resize(thumbnailWidth, thumbnailHeight);
+
                 if(i % 2 == 0)
                     this.listCertificateBox[i].Place(0, y);
                 else
@@ -42,24 +34,44 @@ class CertificateSection extends Component
                     y += this.listCertificateBox[i].GetHeight() + 10;
                 }
             }
-            else
+            else if(width < 1080)
             {
-                thumbnailWidth = width / 3;
+                thumbnailWidth = width / 4;
                 thumbnailHeight = thumbnailWidth / 1.4243;
 
                 this.listCertificateBox[i].Resize(thumbnailWidth, thumbnailHeight);
-                if(i % 3 == 0)
+                if(i % 4 == 0)
                     this.listCertificateBox[i].Place(0, y);
-                else if(i % 3 == 1)
+                else if(i % 4 == 3)
                 {
-                    this.listCertificateBox[i].Place(width / 3, y);
+                    this.listCertificateBox[i].Place((width / 4) * (i % 4), y);
+                    y += this.listCertificateBox[i].GetHeight() + 10;
                 }
                 else
                 {
-                    this.listCertificateBox[i].Place((width / 3) * 2, y);
-                    y += this.listCertificateBox[i].GetHeight() + 10;
+                    this.listCertificateBox[i].Place((width / 4) * (i % 4), y);
                 }
             }
+            else
+            {
+                thumbnailWidth = width / 6;
+                thumbnailHeight = thumbnailWidth / 1.4243;
+
+                this.listCertificateBox[i].Resize(thumbnailWidth, thumbnailHeight);
+                if(i % 6 == 0)
+                    this.listCertificateBox[i].Place(0, y);
+                else if(i % 6 == 5)
+                {
+                    this.listCertificateBox[i].Place((width / 6) * (i % 6), y);
+                    y += this.listCertificateBox[i].GetHeight() + 10;
+                }
+                else 
+                {
+                    this.listCertificateBox[i].Place((width / 6) * (i % 6), y);
+                }
+            }
+            if(i == this.listCertificateBox.length - 1)
+                y += this.listCertificateBox[this.listCertificateBox.length - 1].GetHeight() + 10;
         }
         super.Resize(width, y);
     }

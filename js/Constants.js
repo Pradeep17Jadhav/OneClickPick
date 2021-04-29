@@ -12,8 +12,7 @@ const CssConstants = {
 const SizeConstants = {
     SECTION_HEIGHT: 960,
     SECTION_WIDTH_ABOUT_ME: 360,
-    SECTION_HEIGHT_ABOUT_ME: 600
-
+    SECTION_HEIGHT_ABOUT_ME: 420
 }
 
 const FontSizeConstants = {
