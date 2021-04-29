@@ -29,6 +29,11 @@ class Component
         this.element.classList.add(cls);
     }
 
+    RemoveClass(cls)
+    {
+        this.element.classList.remove(cls);
+    }
+
     Resize(width, height)
     {
         this.SetWidth(width);
@@ -39,6 +44,11 @@ class Component
     {
         this.SetLeft(left);
         this.SetTop(top);
+    }
+
+    SetScroll(value)
+    {
+        this.element.scrollTop = value;
     }
 
     SetWidth(width)
