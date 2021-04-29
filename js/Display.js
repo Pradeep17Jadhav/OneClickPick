@@ -5,7 +5,7 @@ class Display extends Component
         super();
         this.introduction = new Component(null, false);
         this.introduction.AddClass("section");
-        this.introduction.BackgroundImage("images/section1.jpg");
+        this.introduction.BackgroundImage("resources/images/section1.jpg");
         this.introduction.BackgroundAttachment("fixed");
 
         this.name = new Component("span", true);
@@ -28,7 +28,7 @@ class Display extends Component
         
         this.section3 = new Component(null, false);
         this.section3.AddClass("section");
-        this.section3.BackgroundImage("images/section2.jpg");
+        this.section3.BackgroundImage("resources/images/section2.jpg");
         this.AddChild(this.section3);
     }
 

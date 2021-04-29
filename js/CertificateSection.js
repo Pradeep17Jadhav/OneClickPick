@@ -66,7 +66,7 @@ class CertificateBox extends Component
         this.certificate = new Certificate();
         this.certificate.SetCourseName("Introduction to TensorFlow");
         this.certificate.SetPlatform("Coursera");
-        this.certificate.SetBackgroundImage("resources//certificates//cert7.jpg");
+        this.certificate.SetBackgroundImage("resources/certificates/cert7.jpg");
         this.AddChild(this.certificate);
     }
 
