@@ -3,9 +3,10 @@ class SkillsChart extends Component
     constructor()
     {
         super();
+        this.AddClass("skillsChart");
 
         this.languages = {
-            "HTML": 90,
+            "HTML": 100,
             "CSS": 90,
             "C++": 70,
             "C#": 70,
@@ -19,7 +20,7 @@ class SkillsChart extends Component
 
         for(let key in this.languages)
         {
-            let lang = new SkillItem(key, this.languages[key]);
+            let lang = new SkillsItem(key, this.languages[key]);
             this.lstSkillItems.push(lang);        
             this.AddChild(lang);
         }
@@ -30,20 +31,23 @@ class SkillsChart extends Component
         let y = 20;
         for(let i = 0; i < this.lstSkillItems.length; i++)
         {
-            this.lstSkillItems[i].Resize(width, 30);
+            this.lstSkillItems[i].Resize(width, 15);
             this.lstSkillItems[i].Place(0, y);
-            y += this.lstSkillItems[i].GetHeight() + 5;
+            y += this.lstSkillItems[i].GetHeight() + CssConstants.PADDING6X;
         }
 
         super.Resize(width, y);
     }
 }
 
-class SkillItem extends Component
+class SkillsItem extends Component
 {
     constructor(skillName, percent)
     {
         super();
+        this.AddClass("skillsItem");
+        this.percent = percent;
+
         this.skillName = new Component();
         this.skillName.AddClass("skillsItemText");
         this.skillName.GetElement().innerHTML = skillName;
@@ -53,29 +57,29 @@ class SkillItem extends Component
         this.bar.AddClass("skillsBar");
         this.AddChild(this.bar);
         
-        this.percent = new Component();
-        this.percent.AddClass("skillsItemText");
-        this.percent.GetElement().innerHTML = percent;
-        this.AddChild(this.percent);
+        this.percentLabel = new Component();
+        this.percentLabel.AddClass("skillsItemText");
+        this.percentLabel.GetElement().innerHTML = this.percent + "%";
+        this.AddChild(this.percentLabel);
     }
 
     Resize(width, height)
     {
         let x = 0;
-        let barAvailableWidth = width - 10;
+        let barAvailableWidth = width - 100;
 
-        this.skillName.Resize(50, height);
+        this.skillName.Resize(80, height);
         this.skillName.Place(x, 0);
-        x += this.skillName.GetWidth() + CssConstants.PADDING3X;
+        x += this.skillName.GetWidth() + CssConstants.PADDING7X;
 
         this.bar.Resize(barAvailableWidth * this.percent / 100, height);
         this.bar.Place(x, 0);
         x += this.bar.GetWidth() + CssConstants.PADDING3X;
 
-        this.percent.Resize(50, height);
-        this.percent.Place(x, 0);
-        x += this.percent.GetWidth() + CssConstants.PADDING3X;
+        this.percentLabel.Resize(30, height);
+        this.percentLabel.Place(x, 0);
+        x += this.percentLabel.GetWidth() + CssConstants.PADDING3X;
 
-        super.Resize(width, height);
+        super.Resize(x, height);
     }
 }

@@ -44,13 +44,13 @@ class Resume extends Main
                 top = this.display.aboutMeSection.GetTop();
                 break;
             case "Skills":
-                top = this.display.aboutMeSection.GetTop();
+                top = this.display.skillsSection.GetTop();
                 break;
             case "Projects":
-                top = this.display.certificateSection.GetTop();
+                top = this.display.projectsSection.GetTop();
                 break;
             case "Contact":
-                top = this.display.section3.GetTop();
+                top = this.display.contactSection.GetTop();
                 break;
             default:
                 top = 0;

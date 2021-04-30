@@ -1,5 +1,7 @@
 body {
     margin: auto;
+    font-family: "Raleway", "sans-serif";
+
 }
 
 @font-face {
@@ -12,7 +14,6 @@ body {
 }
 
 button {
-    font-family: "Raleway", "sans-serif";
     font-size: 18px;
     transition: 0.5s;
     background-color: #000;
@@ -31,6 +32,9 @@ button:hover {
 
 /************************************************ HEADER START */
 .header { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #fff; 
     position: fixed;
     box-shadow: 0px -5px 10px #000;
@@ -48,10 +52,13 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Raleway', sans-serif;
     font-size: 16px;
     transition: 0.5s;
     cursor: pointer;
+}
+.headerItem:hover {
+    color: #03a08d;
+    transition: 0.2s;
 }
 
 
@@ -69,7 +76,6 @@ button:hover {
 
 /************************************************ INTRODUCTION SECTION START */
 .introductionName {
-    font-family: "Raleway", "sans-serif";
     font-size: 108px;
     font-weight: 700;
     color: #fff;
@@ -80,7 +86,6 @@ button:hover {
 }
 
 .introductionRole {
-    font-family: "Raleway", "sans-serif";
     font-size: 36px;
     font-weight: 300;
     color: #fff;
@@ -93,6 +98,10 @@ button:hover {
 
 
 /************************************************ ABOUT ME SECTION START */
+.aboutMeSection {
+    background-color: #00E3C8;
+}
+
 .aboutMeTitle {
     font-family: "Font1", "sans-serif";
     font-size: 36px;
@@ -102,11 +111,11 @@ button:hover {
 }
 
 .aboutMeDescription {
-    font-family: "Raleway", "sans-serif";
     font-size: 22px;
     text-align: center;
     transition: 0.5s;
     line-height: 150%;
+    min-height: 10px;
 }
 
 
@@ -116,6 +125,18 @@ button:hover {
     color: white;
     background-image: url("../resources/images/desk.jpg");
     background-attachment: fixed;
+    text-align: center;
+}
+
+.skillsChart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skillsItem {
+    text-align: center;
+
 }
 
 .skillsItemText {
@@ -124,7 +145,7 @@ button:hover {
 }
 
 .skillsBar {
-    background-color: green;
+    background-color: #00E3C8;
 }
 
 
@@ -152,7 +173,6 @@ button:hover {
 /************************************************ FOOTER SECTION START */
 .footerMadeBy {
     text-align: center;
-    font-family: "Raleway", "sans-serif";
     font-size: 22px;
 }
 
