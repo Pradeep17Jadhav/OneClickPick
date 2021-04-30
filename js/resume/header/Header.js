@@ -5,6 +5,7 @@ class Header extends Component
         super();
         this.AddClass("header");
         this.RemoveClass("box");
+        
         this.name = new Component("span");
         this.name.AddClass("headerName");
         this.name.GetElement().innerHTML = "Pradeep Jadhav";

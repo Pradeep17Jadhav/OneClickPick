@@ -31,11 +31,11 @@ class SkillsSection extends Component
         this.title.Place((this.GetWidth() - this.title.GetWidth()) / 2, y);
         y += this.title.GetHeight() + CssConstants.PADDING3X;
         
-        this.description.Resize(width, 180);
+        this.description.Resize(width, 100);
         this.description.Place((this.GetWidth() - this.description.GetWidth()) / 2, y);
         y += this.description.GetHeight() + CssConstants.PADDING5X;
 
-        this.skillsChart.Resize(width, 300);
+        this.skillsChart.Resize(width / 2, 300);
         this.skillsChart.Place((this.GetWidth() - this.skillsChart.GetWidth()) / 2, y);
     }
 }
