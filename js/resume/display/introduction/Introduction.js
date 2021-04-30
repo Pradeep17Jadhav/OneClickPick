@@ -4,8 +4,8 @@ class Introduction extends Component
     {
         super();
         this.AddClass("section");
-        this.BackgroundImage("resources/images/section1.jpg");
-        this.BackgroundAttachment("fixed");
+        this.SetBackgroundImage("resources/images/section1.jpg");
+        this.SetBackgroundAttachment("fixed");
 
         this.name = new Component("span", true);
         this.name.AddClass("introductionName");

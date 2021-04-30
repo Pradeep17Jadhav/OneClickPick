@@ -26,7 +26,7 @@ class Display extends Component
 
         this.section3 = new Component(null, false);
         this.section3.AddClass("section");
-        this.section3.BackgroundImage("resources/images/section2.jpg");
+        this.section3.SetBackgroundImage("resources/images/section2.jpg");
         this.sectionList.push(this.section3);
         this.AddChild(this.section3);
     }

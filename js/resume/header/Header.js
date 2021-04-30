@@ -21,7 +21,7 @@ class Header extends Component
         this.sectionList.push(this.aboutMe);
         this.AddChild(this.aboutMe);
 
-        this.career = new HeaderItem("Career");
+        this.career = new HeaderItem("Certificates");
         this.sectionList.push(this.career);
         this.AddChild(this.career);
         

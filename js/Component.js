@@ -100,17 +100,17 @@ class Component
         this.element.style.fontSize = value;
     }
 
-    BackgroundImage(path)
+    SetBackgroundImage(path)
     {
         this.element.style.backgroundImage = "url(" + path + ")";    
     }
     
-    BackgroundColor(color)
+    SetBackgroundColor(color)
     {
         this.element.style.backgroundColor = color;    
     }
 
-    BackgroundAttachment(value)
+    SetBackgroundAttachment(value)
     {
         this.element.style.backgroundAttachment = value;    
     }

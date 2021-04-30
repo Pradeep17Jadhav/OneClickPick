@@ -25,8 +25,8 @@ class Certificate extends Component
         this.platform = platform;
     }
 
-    SetBackgroundImage(url)
+    SetCertificateImage(url)
     {
-        this.BackgroundImage(url);
+        this.SetBackgroundImage(url);
     }
 }

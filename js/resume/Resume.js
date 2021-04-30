@@ -36,11 +36,11 @@ class Resume extends Main
         this.footer.Resize(width, 70);
         this.footer.Place(0, y);
 
-        let certificateViewerWidth = width - 50;
-        if(certificateViewerWidth > 1024)
-            certificateViewerWidth = 1024;
-        this.certificateViewer.Resize(certificateViewerWidth, height);
-        this.certificateViewer.Place((width - this.certificateViewer.GetWidth()) / 2, this.docElement.scrollTop + 120);
+        let size = width - 50;
+        if(size > 1024)
+            size = 1024;
+        this.certificateViewer.Resize(size, size);
+        this.certificateViewer.Place((width - this.certificateViewer.GetWidth()) / 2, this.docElement.scrollTop + 100);
     }
 
     MoveTo(target)
@@ -51,8 +51,8 @@ class Resume extends Main
             case "About Me":
                 top = this.display.aboutMeSection.GetTop();
                 break;
-            case "Career":
-                top = this.display.aboutMeSection.GetTop();
+            case "Certificates":
+                top = this.display.certificateSection.GetTop();
                 break;
             case "Skills":
                 top = this.display.skillsSection.GetTop();
@@ -88,7 +88,13 @@ class Resume extends Main
 
     ShowCertificateViewer(index)
     {
+        this.certificateViewer.SetSelectedIndex(index);
         this.certificateViewer.Show();
         this.Resize(this.parentEl.clientWidth, this.parentEl.clientHeight);
+    }
+
+    CloseCertificateViewer()
+    {
+        this.certificateViewer.Hide();
     }
 }
