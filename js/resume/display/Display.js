@@ -12,6 +12,10 @@ class Display extends Component
         this.certificateSection = new CertificateSection();
         this.AddChild(this.certificateSection);
         
+        this.skillsSection = new SkillsSection();
+        this.AddChild(this.skillsSection);
+        
+
         this.section3 = new Component(null, false);
         this.section3.AddClass("section");
         this.section3.BackgroundImage("resources/images/section2.jpg");
@@ -32,6 +36,10 @@ class Display extends Component
         this.certificateSection.Resize(width, 650);
         this.certificateSection.Place(0, y);
         y += this.certificateSection.GetHeight();
+        
+        this.skillsSection.Resize(width, 650);
+        this.skillsSection.Place(0, y);
+        y += this.skillsSection.GetHeight();
 
         this.section3.Resize(width, SizeConstants.SECTION_HEIGHT);
         this.section3.Place(0, y);

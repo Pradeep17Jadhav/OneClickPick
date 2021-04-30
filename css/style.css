@@ -36,6 +36,10 @@ body {
     transform: translateZ(-1px);
 }
 
+.skills {
+    color: white;
+}
+
 .headerName {
     font-family: "Calligraffitti", "sans-serif";
     font-size: 36px;

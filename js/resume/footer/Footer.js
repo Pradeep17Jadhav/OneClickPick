@@ -3,6 +3,9 @@ class Footer extends Component
     constructor()
     {
         super();
+        this.AddClass("footer");
+        this.RemoveClass("box");
+
         this.madeby = new Component();
         this.madeby.AddClass("footerMadeBy");
         this.madeby.GetElement().innerHTML = `Made With <i class="fas fa-heart"></i> by Pradeep Jadhav`;
