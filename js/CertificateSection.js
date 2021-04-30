@@ -16,7 +16,7 @@ class CertificateSection extends Component
     Resize(width, height)
     {
         super.Resize(width, height);
-        let y = 0;
+        let y = 20;
         let thumbnailWidth, thumbnailHeight;
         for(let i = 0; i < this.listCertificateBox.length; i++)
         {
@@ -71,7 +71,7 @@ class CertificateSection extends Component
                 }
             }
             if(i == this.listCertificateBox.length - 1)
-                y += this.listCertificateBox[this.listCertificateBox.length - 1].GetHeight() + 10;
+                y += this.listCertificateBox[this.listCertificateBox.length - 1].GetHeight() + 20;
         }
         super.Resize(width, y);
     }
