@@ -5,21 +5,26 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <script src = "js/Component.js"></script>
         <script src = "js/Main.js"></script>
         <script src = "js/Constants.js"></script>
-        <script src = "js/Resume.js"></script>
-        <script src = "js/AboutMeSection.js"></script>
-        <script src = "js/CertificateSection.js"></script>
-        <script src = "js/Certificate.js"></script>
-        <script src = "js/Header.js"></script>
-        <script src = "js/Footer.js"></script>
-        <script src = "js/Display.js"></script>
+        <script src = "js/resume/Resume.js"></script>
+        <script src = "js/resume/display/aboutme/AboutMeSection.js"></script>
+        <script src = "js/resume/display/certificate/CertificateSection.js"></script>
+        <script src = "js/resume/display/certificate/Certificate.js"></script>
+        <script src = "js/resume/display/introduction/Introduction.js"></script>
+        <script src = "js/resume/display/skills/SkillsSection.js"></script>
+        <script src = "js/resume/display/skills/SkillsChart.js"></script>
+        <script src = "js/resume/header/Header.js"></script>
+        <script src = "js/resume/header/HeaderItem.js"></script>
+        <script src = "js/resume/footer/Footer.js"></script>
+        <script src = "js/resume/display/Display.js"></script>
         <script>
             function OnLoad()
             {
                 document.getElementById("container").clientWidth =
-                Resume = new Resume(document.getElementById("container"));
+                Resume = new Resume(document.getElementById("container"), document.documentElement);
             }
         </script>
     </head>

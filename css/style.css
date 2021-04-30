@@ -1,5 +1,7 @@
 body {
     margin: auto;
+    font-family: "Raleway", "sans-serif";
+
 }
 
 @font-face {
@@ -11,75 +13,7 @@ body {
     position: absolute;
 }
 
-.header { 
-    background: #fff; 
-    position: fixed;
-    box-shadow: 0px -5px 10px #000;
-    z-index: 99;
-}
-
-.headerItem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.section {
-    height: 960;
-    width: auto; 
-    background-position: center center;
-    background-size: cover;
-    transform: translateZ(-1px);
-}
-
-.headerName {
-    font-family: "Calligraffitti", "sans-serif";
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 70px;
-}
-
-.sectionName {
-    font-family: "Raleway", "sans-serif";
-    font-size: 108px;
-    font-weight: 700;
-    color: #fff;
-    text-align: center;
-    line-height: 100%;
-    text-shadow: 0px 0px 20px #000;
-}
-
-.sectionRole {
-    font-family: "Raleway", "sans-serif";
-    font-size: 36px;
-    font-weight: 300;
-    color: #fff;
-    text-align: center;
-    line-height: 100%;
-    text-shadow: 1px 1px 6px #000;
-}
-
-.aboutMeTitle {
-    font-family: "Font1", "sans-serif";
-    font-size: 36px;
-    text-align: center;
-    transition: 0.5s;
-    line-height: 100%;
-}
-
-.aboutMeDescription {
-    font-family: "Raleway", "sans-serif";
-    font-size: 22px;
-    text-align: center;
-    transition: 0.5s;
-    line-height: 150%;
-}
-
 button {
-    font-family: "Raleway", "sans-serif";
     font-size: 18px;
     transition: 0.5s;
     background-color: #000;
@@ -94,6 +28,129 @@ button:hover {
     cursor: pointer;
 }
 
+
+
+/************************************************ HEADER START */
+.header { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff; 
+    position: fixed;
+    box-shadow: 0px -5px 10px #000;
+    z-index: 99;    
+}
+
+.headerName {
+    font-family: "Calligraffitti", "sans-serif";
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 70px;
+}
+
+.headerItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.headerItem:hover {
+    color: #03a08d;
+    transition: 0.2s;
+}
+
+
+
+/************************************************ SECTION START */
+.section {
+    height: 960;
+    width: auto; 
+    background-position: center center;
+    background-size: cover;
+    transform: translateZ(-1px);
+}
+
+
+
+/************************************************ INTRODUCTION SECTION START */
+.introductionName {
+    font-size: 108px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    line-height: 100%;
+    text-shadow: 0px 0px 20px #000;
+    min-height: 10px;
+}
+
+.introductionRole {
+    font-size: 36px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    line-height: 100%;
+    text-shadow: 1px 1px 6px #000;
+    min-height: 10px;
+}
+
+
+
+/************************************************ ABOUT ME SECTION START */
+.aboutMeSection {
+    background-color: #00E3C8;
+}
+
+.aboutMeTitle {
+    font-family: "Font1", "sans-serif";
+    font-size: 36px;
+    text-align: center;
+    transition: 0.5s;
+    line-height: 100%;
+}
+
+.aboutMeDescription {
+    font-size: 22px;
+    text-align: center;
+    transition: 0.5s;
+    line-height: 150%;
+    min-height: 10px;
+}
+
+
+
+/************************************************ SKILLS SECTION START */
+.skillsSection {
+    color: white;
+    background-image: url("../resources/images/desk.jpg");
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.skillsChart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skillsItem {
+    text-align: center;
+
+}
+
+.skillsItemText {
+    text-align: center;
+    font-size: 15px;
+}
+
+.skillsBar {
+    background-color: #00E3C8;
+}
+
+
+
+/************************************************ CERTIFICATES SECTION START */
 .certificateBox {
     overflow: hidden;
 }
@@ -109,4 +166,16 @@ button:hover {
   	-webkit-filter: grayscale(1);
     transform:scale(1.10);
  	transition:0.5s;
+}
+
+
+
+/************************************************ FOOTER SECTION START */
+.footerMadeBy {
+    text-align: center;
+    font-size: 22px;
+}
+
+.fa-heart {
+    color: rgb(179, 0, 0);
 }
