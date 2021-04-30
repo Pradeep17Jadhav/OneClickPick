@@ -4,8 +4,8 @@ class AboutMeSection extends Component
     {
         super(null, false);
 
-        this.BackgroundColor("#00E3C8");
         this.AddClass("section");
+        this.AddClass("aboutMeSection");
         
         this.title = new Component("span");
         this.title.AddClass(CssClassConstants.ABOUT_ME_TITLE);

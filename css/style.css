@@ -53,6 +53,10 @@ button:hover {
     transition: 0.5s;
     cursor: pointer;
 }
+.headerItem:hover {
+    color: #03a08d;
+    transition: 0.3s;
+}
 
 
 
@@ -91,6 +95,10 @@ button:hover {
 
 
 /************************************************ ABOUT ME SECTION START */
+.aboutMeSection {
+    background-color: #00E3C8;
+}
+
 .aboutMeTitle {
     font-family: "Font1", "sans-serif";
     font-size: 36px;
@@ -104,6 +112,7 @@ button:hover {
     text-align: center;
     transition: 0.5s;
     line-height: 150%;
+    min-height: 10px;
 }
 
 
@@ -133,7 +142,7 @@ button:hover {
 }
 
 .skillsBar {
-    background-color: rgb(0, 212, 0);
+    background-color: #00E3C8;
 }
 
 

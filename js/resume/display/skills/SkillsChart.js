@@ -6,7 +6,7 @@ class SkillsChart extends Component
         this.AddClass("skillsChart");
 
         this.languages = {
-            "HTML": 90,
+            "HTML": 100,
             "CSS": 90,
             "C++": 70,
             "C#": 70,
@@ -33,7 +33,7 @@ class SkillsChart extends Component
         {
             this.lstSkillItems[i].Resize(width, 15);
             this.lstSkillItems[i].Place(0, y);
-            y += this.lstSkillItems[i].GetHeight() + 15;
+            y += this.lstSkillItems[i].GetHeight() + CssConstants.PADDING6X;
         }
 
         super.Resize(width, y);
