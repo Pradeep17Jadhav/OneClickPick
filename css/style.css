@@ -32,6 +32,9 @@ button:hover {
 
 /************************************************ HEADER START */
 .header { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #fff; 
     position: fixed;
     box-shadow: 0px -5px 10px #000;
@@ -55,7 +58,7 @@ button:hover {
 }
 .headerItem:hover {
     color: #03a08d;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 

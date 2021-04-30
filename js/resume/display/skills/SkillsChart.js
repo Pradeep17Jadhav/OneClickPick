@@ -70,7 +70,7 @@ class SkillsItem extends Component
 
         this.skillName.Resize(80, height);
         this.skillName.Place(x, 0);
-        x += this.skillName.GetWidth() + CssConstants.PADDING3X;
+        x += this.skillName.GetWidth() + CssConstants.PADDING7X;
 
         this.bar.Resize(barAvailableWidth * this.percent / 100, height);
         this.bar.Place(x, 0);
