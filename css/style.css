@@ -1,7 +1,6 @@
 body {
     margin: auto;
     font-family: "Raleway", "sans-serif";
-
 }
 
 @font-face {
@@ -46,6 +45,16 @@ button:hover {
     font-size: 36px;
     font-weight: 500;
     line-height: 70px;
+    transition: 0.3s;
+}
+
+.headerName:hover {
+    cursor: pointer;
+}
+
+.headerNameActive {
+    color: #03a08d;
+    transition: 0.3s;
 }
 
 .headerItem {
@@ -53,15 +62,19 @@ button:hover {
     justify-content: center;
     align-items: center;
     font-size: 16px;
-    transition: 0.5s;
     cursor: pointer;
+    transition: 0.3s;
 }
 .headerItem:hover {
     color: #03a08d;
     transition: 0.2s;
 }
 
-
+.headerItemActive {
+    border-top: 5px solid #00E3C8;
+    color: #03a08d;
+    transition: 0.2s;
+}
 
 /************************************************ SECTION START */
 .section {

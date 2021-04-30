@@ -3,22 +3,31 @@ class Display extends Component
     constructor()
     {
         super();
+        
+        //list to maintain all sections added in dom
+        this.sectionList = [];
+
         this.introductionSection = new Introduction();
+        this.sectionList.push(this.introductionSection);
         this.AddChild(this.introductionSection);
 
         this.aboutMeSection = new AboutMeSection();
+        this.sectionList.push(this.aboutMeSection);
         this.AddChild(this.aboutMeSection);
 
         this.certificateSection = new CertificateSection();
+        this.sectionList.push(this.certificateSection);
         this.AddChild(this.certificateSection);
         
         this.skillsSection = new SkillsSection();
+        this.sectionList.push(this.skillsSection);
         this.AddChild(this.skillsSection);
         
 
         this.section3 = new Component(null, false);
         this.section3.AddClass("section");
         this.section3.BackgroundImage("resources/images/section2.jpg");
+        this.sectionList.push(this.section3);
         this.AddChild(this.section3);
     }
 
@@ -49,5 +58,8 @@ class Display extends Component
         super.Resize(width, y);
     }
 
- 
+    GetSectionList()
+    {
+        return this.sectionList;
+    }
 }

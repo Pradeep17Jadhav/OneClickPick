@@ -23,8 +23,10 @@
         <script>
             function OnLoad()
             {
-                document.getElementById("container").clientWidth =
                 Resume = new Resume(document.getElementById("container"), document.documentElement);
+                document.onscroll = (e) => {
+                    Resume.OnScroll();
+                }
             }
         </script>
     </head>
