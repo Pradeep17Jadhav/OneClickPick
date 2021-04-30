@@ -7,6 +7,10 @@ class Resume extends Main
         this.docElement = docElement;
         this.RemoveClass("box");
 
+        this.certificateViewer = new CertificateViewer();
+        this.AddChild(this.certificateViewer);
+        this.certificateViewer.Hide();
+
         this.header = new Header();
         this.AddChild(this.header);
 
@@ -31,6 +35,12 @@ class Resume extends Main
 
         this.footer.Resize(width, 70);
         this.footer.Place(0, y);
+
+        let certificateViewerWidth = width - 50;
+        if(certificateViewerWidth > 1024)
+            certificateViewerWidth = 1024;
+        this.certificateViewer.Resize(certificateViewerWidth, height);
+        this.certificateViewer.Place((width - this.certificateViewer.GetWidth()) / 2, this.docElement.scrollTop + 120);
     }
 
     MoveTo(target)
@@ -55,7 +65,6 @@ class Resume extends Main
                 break;
             default:
                 top = 0;
-                
         }
 
         this.docElement.scrollTo({
@@ -75,5 +84,11 @@ class Resume extends Main
                 this.header.SetActiveSection(i);
             }
         }
+    }
+
+    ShowCertificateViewer(index)
+    {
+        this.certificateViewer.Show();
+        this.Resize(this.parentEl.clientWidth, this.parentEl.clientHeight);
     }
 }

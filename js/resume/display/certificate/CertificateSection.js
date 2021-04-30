@@ -8,6 +8,9 @@ class CertificateSection extends Component
         for(let i = 0; i < 9; i++)
         {
             let certificateBox = new CertificateBox(i);
+            certificateBox.GetElement().onpointerup = (e) => {
+                this.parent.parent.ShowCertificateViewer(i);
+            }
             this.AddChild(certificateBox);
             this.listCertificateBox.push(certificateBox);
         }
@@ -87,7 +90,7 @@ class CertificateBox extends Component
         this.certificate = new Certificate();
         this.certificate.SetCourseName("Introduction to TensorFlow");
         this.certificate.SetPlatform("Coursera");
-        this.certificate.SetBackgroundImage("resources/certificates/thumbnail_" + (certIndex + 1) + ".jpg");
+        this.certificate.SetBackgroundImage("resources/certificates/thumbnails/thumbnail_" + (certIndex + 1) + ".jpg");
         this.AddChild(this.certificate);
     }
 

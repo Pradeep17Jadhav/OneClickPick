@@ -134,4 +134,9 @@ class Component
     {
         return this.top;
     }
+    
+    GetLeft()
+    {
+        return this.left;
+    }
 }
