@@ -52,7 +52,8 @@ class Resume extends Main
             case "Contact":
                 top = this.display.section3.GetTop();
                 break;
-            
+            default:
+                top = 0;
                 
         }
 

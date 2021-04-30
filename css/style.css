@@ -11,80 +11,6 @@ body {
     position: absolute;
 }
 
-.header { 
-    background: #fff; 
-    position: fixed;
-    box-shadow: 0px -5px 10px #000;
-    z-index: 99;    
-}
-
-.headerItem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-.section {
-    height: 960;
-    width: auto; 
-    background-position: center center;
-    background-size: cover;
-    transform: translateZ(-1px);
-}
-
-.skills {
-    color: white;
-}
-
-.headerName {
-    font-family: "Calligraffitti", "sans-serif";
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 70px;
-}
-
-.sectionName {
-    font-family: "Raleway", "sans-serif";
-    font-size: 108px;
-    font-weight: 700;
-    color: #fff;
-    text-align: center;
-    line-height: 100%;
-    text-shadow: 0px 0px 20px #000;
-    min-height: 10px;
-}
-
-.sectionRole {
-    font-family: "Raleway", "sans-serif";
-    font-size: 36px;
-    font-weight: 300;
-    color: #fff;
-    text-align: center;
-    line-height: 100%;
-    text-shadow: 1px 1px 6px #000;
-    min-height: 10px;
-}
-
-.aboutMeTitle {
-    font-family: "Font1", "sans-serif";
-    font-size: 36px;
-    text-align: center;
-    transition: 0.5s;
-    line-height: 100%;
-}
-
-.aboutMeDescription {
-    font-family: "Raleway", "sans-serif";
-    font-size: 22px;
-    text-align: center;
-    transition: 0.5s;
-    line-height: 150%;
-}
-
 button {
     font-family: "Raleway", "sans-serif";
     font-size: 18px;
@@ -101,6 +27,109 @@ button:hover {
     cursor: pointer;
 }
 
+
+
+/************************************************ HEADER START */
+.header { 
+    background: #fff; 
+    position: fixed;
+    box-shadow: 0px -5px 10px #000;
+    z-index: 99;    
+}
+
+.headerName {
+    font-family: "Calligraffitti", "sans-serif";
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 70px;
+}
+
+.headerItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+
+/************************************************ SECTION START */
+.section {
+    height: 960;
+    width: auto; 
+    background-position: center center;
+    background-size: cover;
+    transform: translateZ(-1px);
+}
+
+
+
+/************************************************ INTRODUCTION SECTION START */
+.introductionName {
+    font-family: "Raleway", "sans-serif";
+    font-size: 108px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    line-height: 100%;
+    text-shadow: 0px 0px 20px #000;
+    min-height: 10px;
+}
+
+.introductionRole {
+    font-family: "Raleway", "sans-serif";
+    font-size: 36px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    line-height: 100%;
+    text-shadow: 1px 1px 6px #000;
+    min-height: 10px;
+}
+
+
+
+/************************************************ ABOUT ME SECTION START */
+.aboutMeTitle {
+    font-family: "Font1", "sans-serif";
+    font-size: 36px;
+    text-align: center;
+    transition: 0.5s;
+    line-height: 100%;
+}
+
+.aboutMeDescription {
+    font-family: "Raleway", "sans-serif";
+    font-size: 22px;
+    text-align: center;
+    transition: 0.5s;
+    line-height: 150%;
+}
+
+
+
+/************************************************ SKILLS SECTION START */
+.skillsSection {
+    color: white;
+    background-image: url("../resources/images/desk.jpg");
+    background-attachment: fixed;
+}
+
+.skillsItemText {
+    text-align: center;
+    font-size: 15px;
+}
+
+.skillsBar {
+    background-color: green;
+}
+
+
+
+/************************************************ CERTIFICATES SECTION START */
 .certificateBox {
     overflow: hidden;
 }
@@ -118,6 +147,9 @@ button:hover {
  	transition:0.5s;
 }
 
+
+
+/************************************************ FOOTER SECTION START */
 .footerMadeBy {
     text-align: center;
     font-family: "Raleway", "sans-serif";

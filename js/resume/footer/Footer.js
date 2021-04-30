@@ -4,7 +4,6 @@ class Footer extends Component
     {
         super();
         this.AddClass("footer");
-        this.RemoveClass("box");
 
         this.madeby = new Component();
         this.madeby.AddClass("footerMadeBy");

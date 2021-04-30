@@ -4,9 +4,7 @@ class SkillsSection extends Component
     {
         super();
         this.AddClass("section");
-        this.AddClass("skills");
-        this.BackgroundImage("resources/images/desk.jpg");
-        this.BackgroundAttachment("fixed");
+        this.AddClass("skillsSection");
         
         this.title = new Component("span");
         this.title.AddClass(CssClassConstants.ABOUT_ME_TITLE);
@@ -16,15 +14,12 @@ class SkillsSection extends Component
 
         this.description = new Component("span");
         this.description.AddClass(CssClassConstants.ABOUT_ME_DESCRIPTION);
-        this.description.GetElement().innerHTML = `Skills to be added soon.`;
+        this.description.GetElement().innerHTML = `My knowledge in various languages and softwares`;
         this.AddChild(this.description);
 
-        this.btn = new Component("button");
-        this.btn.GetElement().innerHTML = "See Resume";
-        this.btn.GetElement().onpointerup = (e) => {
-            window.open(URLConstants.RESUME);
-        }
-        this.AddChild(this.btn);
+        this.skillsChart = new SkillsChart();
+        this.AddChild(this.skillsChart);
+
     }
 
     Resize(width, height)
@@ -32,15 +27,15 @@ class SkillsSection extends Component
         super.Resize(width, height);
 
         let y = 50;
-        this.title.Resize(600, 50);
+        this.title.Resize(width, 50);
         this.title.Place((this.GetWidth() - this.title.GetWidth()) / 2, y);
         y += this.title.GetHeight() + CssConstants.PADDING3X;
         
-        this.description.Resize(600, 180);
+        this.description.Resize(width, 180);
         this.description.Place((this.GetWidth() - this.description.GetWidth()) / 2, y);
         y += this.description.GetHeight() + CssConstants.PADDING5X;
 
-        this.btn.Resize(150, 60);
-        this.btn.Place((this.GetWidth() - this.btn.GetWidth()) / 2, y);
+        this.skillsChart.Resize(width, 300);
+        this.skillsChart.Place((this.GetWidth() - this.skillsChart.GetWidth()) / 2, y);
     }
 }

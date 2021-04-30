@@ -8,12 +8,12 @@ class Introduction extends Component
         this.BackgroundAttachment("fixed");
 
         this.name = new Component("span", true);
-        this.name.AddClass("sectionName");
+        this.name.AddClass("introductionName");
         this.name.GetElement().innerHTML = "Pradeep Jadhav";
         this.AddChild(this.name);
 
         this.role = new Component("span", true);
-        this.role.AddClass("sectionRole");
+        this.role.AddClass("introductionRole");
         this.role.GetElement().innerHTML = "Software Engineer";
         this.AddChild(this.role);
     }
