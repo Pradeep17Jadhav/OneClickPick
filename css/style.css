@@ -1,7 +1,7 @@
 body {
     margin: auto;
     font-family: "Raleway", "sans-serif";
-
+    cursor:default;
 }
 
 @font-face {
@@ -146,6 +146,11 @@ button:hover {
 
 .skillsBar {
     background-color: #00E3C8;
+    transition:0.2s;
+}
+.skillsBar:hover {
+    background-color: #028a7a;
+    transition:0.2s;
 }
 
 
