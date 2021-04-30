@@ -6,6 +6,7 @@ class Resume extends Main
         this.parentEl = parent; 
         this.docElement = docElement;
         this.RemoveClass("box");
+
         this.header = new Header();
         this.AddChild(this.header);
 
@@ -61,5 +62,18 @@ class Resume extends Main
             top: top,
             behavior: "smooth"
         });
+    }
+
+    OnScroll()
+    {
+        let scrollTop = this.docElement.scrollTop;
+        let sectionList = this.display.GetSectionList();
+        for(let i = 0; i < sectionList.length; i++)
+        {
+            if(scrollTop >= sectionList[i].GetTop())
+            {
+                this.header.SetActiveSection(i);
+            }
+        }
     }
 }
