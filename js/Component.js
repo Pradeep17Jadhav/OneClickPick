@@ -14,6 +14,7 @@ class Component
         this.top = 0;
         this.width = 0;
         this.height = 0;
+        this.display = null;
         this.parent = null;
     }
 
@@ -38,6 +39,25 @@ class Component
     {
         this.SetWidth(width);
         this.SetHeight(height);
+    }
+
+    Hide()
+    {
+        this.display = this.element.style.display == "" ? "block" : this.element.style.display;
+
+        this.element.style.display = "none";
+        this.visible = false;
+    }
+
+    Show()
+    {
+        this.element.style.display = this.display;
+        this.visible = true;
+    }
+
+    isVisible()
+    {
+        return this.visible;
     }
 
     Place(left, top)

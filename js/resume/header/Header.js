@@ -10,32 +10,19 @@ class Header extends Component
         this.name.GetElement().innerHTML = "Pradeep Jadhav";
         this.AddChild(this.name);
 
-        this.aboutMe = new Component();
-        this.aboutMe.AddClass("headerItem");
-        this.aboutMe.GetElement().innerHTML = "About Me";
-        this.aboutMe.GetElement().onpointerup = () => {
-            this.parent.MoveTo("aboutMe");
-        }
+        this.aboutMe = new HeaderItem("About Me");
         this.AddChild(this.aboutMe);
 
-        this.career = new Component();
-        this.career.AddClass("headerItem");
-        this.career.GetElement().innerHTML = "Career";
+        this.career = new HeaderItem("Career");
         this.AddChild(this.career);
         
-        this.skills = new Component();
-        this.skills.AddClass("headerItem");
-        this.skills.GetElement().innerHTML = "Skills";
+        this.skills = new HeaderItem("Skills");
         this.AddChild(this.skills);
                 
-        this.projects = new Component();
-        this.projects.AddClass("headerItem");
-        this.projects.GetElement().innerHTML = "Projects";
+        this.projects = new HeaderItem("Projects");
         this.AddChild(this.projects);
 
-        this.contact = new Component();
-        this.contact.AddClass("headerItem");
-        this.contact.GetElement().innerHTML = "Projects";
+        this.contact = new HeaderItem("Contact");
         this.AddChild(this.contact);
     }
 
@@ -44,9 +31,20 @@ class Header extends Component
     {
         let x = 30;
 
-        this.name.Resize(220, height);
-        this.name.Place(x, 0);
-        x += this.name.GetWidth() + 10;
+        if(width < 720)
+        {
+            if(this.name.isVisible())
+                this.name.Hide();
+        }
+        else
+        {
+            if(!this.name.isVisible())
+                this.name.Show();
+                
+            this.name.Resize(220, height);
+            this.name.Place(x, 0);
+            x += this.name.GetWidth() + 10;
+        }
 
         let right = 30;
         this.aboutMe.Resize(80, height);
