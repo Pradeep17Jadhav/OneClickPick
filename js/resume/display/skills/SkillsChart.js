@@ -6,7 +6,7 @@ class SkillsChart extends Component
         this.AddClass("skillsChart");
 
         this.languages = {
-            "HTML": 100,
+            "HTML": 90,
             "CSS": 90,
             "C++": 70,
             "C#": 70,
