@@ -3,24 +3,8 @@ class Resume extends Main
     constructor(parent, docElement)
     {
         super(parent);
-        this.parentEl = parent; 
-        this.parentEl.onscroll = (e) => {
-            if(this.certificateViewer.isVisible())
-            {
-                e.stopPropagation();
-                e.preventDefault();
-            }
-        }
-
+        this.parentEl = parent;
         this.docElement = docElement;
-        this.docElement.onscroll = (e) => {
-            if(this.certificateViewer.isVisible())
-            {
-                e.stopPropagation();
-                e.preventDefault();
-            }
-        }
-
         this.RemoveClass("box");
 
         
@@ -119,12 +103,12 @@ class Resume extends Main
         }
     }
 
-    ShowCertificateViewer(index)
+    ShowCertificateViewer(certificateData)
     {
         
         this.certificateViewer.RemoveClass("hidden");
         this.certificateViewer.Show();
-        this.certificateViewer.SetSelectedIndex(index);
+        this.certificateViewer.SetCertificateData(certificateData);
         this.blocker.Show();
         
         this.Resize(this.parentEl.clientWidth, this.parentEl.clientHeight);

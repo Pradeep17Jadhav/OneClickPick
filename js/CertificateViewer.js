@@ -4,11 +4,12 @@ class CertificateViewer extends Component
     {
         super();
         this.AddClass("certificateViewer");
+        this.activeIndex = 0;
 
         this.titleBar = new Component();
         this.title = new Component();
         this.title.AddClass("title");
-        this.title.GetElement().innerHTML = "Machine Learning Demo Certificate Name";
+        this.title.GetElement().innerHTML = "Certificate";
 
         this.titleBar.AddChild(this.title);
         this.titleBar.AddClass("titlebar");
@@ -31,6 +32,9 @@ class CertificateViewer extends Component
         this.navigator.AddChild(this.btnPrev);
         this.btnVerify = new Component("button");
         this.btnVerify.GetElement().innerHTML = "Verify Certificate";
+        this.btnVerify.GetElement().onpointerup = (e) => {
+            window.open(this.certificateData.verify);
+        }
         this.navigator.AddChild(this.btnVerify);        
         this.btnNext = new Component("button");
         this.btnNext.GetElement().innerHTML = "Next";
@@ -77,8 +81,11 @@ class CertificateViewer extends Component
         super.Resize(width, y);
     }
 
-    SetSelectedIndex(index)
+    SetCertificateData(certificateData)
     {
-        this.certificateViewer.SetBackgroundImage("resources/certificates/fullres/cert_" + (index + 1) + ".jpg");
+        this.certificateData = certificateData;
+
+        this.title.GetElement().innerHTML = certificateData.name;
+        this.certificateViewer.SetBackgroundImage("resources/certificates/fullres/cert_" + (certificateData.index + 1) + ".jpg");
     }
 }
