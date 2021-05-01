@@ -16,13 +16,13 @@ const SizeConstants = {
 }
 
 const FontSizeConstants = {
-    ABOUT_ME_TITLE: 42,
-    ABOUT_ME_DESCRIPTION: 16
+    SECTION_TITLE: 42,
+    SECTION_DESCRIPTION: 16
 }
 
 const CssClassConstants = {
-   ABOUT_ME_TITLE: "aboutMeTitle",
-   ABOUT_ME_DESCRIPTION: "aboutMeDescription",
+   SECTION_TITLE: "sectionTitle",
+   SECTION_DESCRIPTION: "sectionDescription",
    CERTIFICATE: "certificate"
 }
 

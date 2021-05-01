@@ -7,13 +7,13 @@ class SkillsSection extends Component
         this.AddClass("skillsSection");
         
         this.title = new Component();
-        this.title.AddClass(CssClassConstants.ABOUT_ME_TITLE);
-        this.title.SetFontSize(FontSizeConstants.ABOUT_ME_TITLE);
+        this.title.AddClass(CssClassConstants.SECTION_TITLE);
+        this.title.SetFontSize(FontSizeConstants.SECTION_TITLE);
         this.title.GetElement().innerHTML = "Skills";
         this.AddChild(this.title);
 
         this.description = new Component();
-        this.description.AddClass(CssClassConstants.ABOUT_ME_DESCRIPTION);
+        this.description.AddClass(CssClassConstants.SECTION_DESCRIPTION);
         this.description.GetElement().innerHTML = `My knowledge in various languages and softwares`;
         this.AddChild(this.description);
 
