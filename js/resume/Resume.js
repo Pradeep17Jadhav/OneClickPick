@@ -4,8 +4,31 @@ class Resume extends Main
     {
         super(parent);
         this.parentEl = parent; 
+        this.parentEl.onscroll = (e) => {
+            if(this.certificateViewer.isVisible())
+            {
+                e.stopPropagation();
+                e.preventDefault();
+            }
+        }
+
         this.docElement = docElement;
+        this.docElement.onscroll = (e) => {
+            if(this.certificateViewer.isVisible())
+            {
+                e.stopPropagation();
+                e.preventDefault();
+            }
+        }
+
         this.RemoveClass("box");
+
+        
+        this.blocker = new Component();
+        this.blocker.AddClass("blocker");
+
+        this.AddChild(this.blocker);
+        this.blocker.Hide();
 
         this.certificateViewer = new CertificateViewer();
         this.AddChild(this.certificateViewer);
@@ -40,7 +63,10 @@ class Resume extends Main
         if(size > 1024)
             size = 1024;
         this.certificateViewer.Resize(size, size);
-        this.certificateViewer.Place((width - this.certificateViewer.GetWidth()) / 2, this.docElement.scrollTop + 100);
+        this.certificateViewer.Place((width - this.certificateViewer.GetWidth()) / 2, 50);
+
+        this.blocker.Resize(this.parentEl.clientWidth, this.parentEl.clientHeight);
+        this.blocker.Place(0, 0);
     }
 
     MoveTo(target)
@@ -73,8 +99,15 @@ class Resume extends Main
         });
     }
 
-    OnScroll()
+    OnScroll(e)
     {
+        if(this.certificateViewer.isVisible())
+        {
+            this.docElement.scrollTop = this.scrollTop;
+            return;
+        }
+        this.scrollTop = this.docElement.scrollTop;
+
         let scrollTop = this.docElement.scrollTop;
         let sectionList = this.display.GetSectionList();
         for(let i = 0; i < sectionList.length; i++)
@@ -88,13 +121,23 @@ class Resume extends Main
 
     ShowCertificateViewer(index)
     {
-        this.certificateViewer.SetSelectedIndex(index);
+        
+        this.certificateViewer.RemoveClass("hidden");
         this.certificateViewer.Show();
+        this.certificateViewer.SetSelectedIndex(index);
+        this.blocker.Show();
+        
         this.Resize(this.parentEl.clientWidth, this.parentEl.clientHeight);
     }
 
     CloseCertificateViewer()
-    {
-        this.certificateViewer.Hide();
+    {       
+        let self = this;
+        this.certificateViewer.RemoveClass("visible");
+        this.certificateViewer.AddClass("hidden");
+        this.blocker.Hide();
+        setTimeout(function(){
+            self.certificateViewer.Hide();
+        }, 500);
     }
 }

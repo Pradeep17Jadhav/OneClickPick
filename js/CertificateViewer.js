@@ -13,7 +13,7 @@ class CertificateViewer extends Component
         this.titleBar.AddChild(this.title);
         this.titleBar.AddClass("titlebar");
         this.btnClose = new Component("button");
-        this.btnClose.GetElement().innerHTML = "Close";
+        this.btnClose.GetElement().innerHTML = `<i class="far fa-times"></i>`;
         this.btnClose.AddClass("btnClose");
         this.btnClose.GetElement().onpointerup = (e) => {
             this.parent.CloseCertificateViewer();
@@ -50,7 +50,7 @@ class CertificateViewer extends Component
         this.titleBar.Place(0, y);
         y += this.titleBar.GetHeight() + CssConstants.PADDING5X;
 
-        this.btnClose.Resize(80, 30);
+        this.btnClose.Resize(30, 30);
         this.btnClose.Place(availableWidth - this.btnClose.GetWidth(), 10);
         
         this.title.Resize(availableWidth - this.btnClose.GetWidth(), 30);
@@ -79,6 +79,6 @@ class CertificateViewer extends Component
 
     SetSelectedIndex(index)
     {
-        this.certificateViewer.SetBackgroundImage("resources/certificates/thumbnails/thumbnail_" + (index + 1) + ".jpg");
+        this.certificateViewer.SetBackgroundImage("resources/certificates/fullres/cert_" + (index + 1) + ".jpg");
     }
 }
