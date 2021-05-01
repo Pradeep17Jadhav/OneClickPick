@@ -70,7 +70,7 @@ button:hover {
     background-color: transparent;
     border-radius: 10px;
     border: 2px solid rgb(3, 160, 141, 0.3);
-    transition: 0.1s !important;
+    transition: 0.1s;
 }
 .certificateViewer button:hover{
     color: #fff;
@@ -82,14 +82,18 @@ button:hover {
     background-color: transparent !important;
     border: none !important;
     font-size: 22px;
-    transition: 0.2s;
+    transition: 0s;
 }
 
 .btnClose:hover {
     background-color: transparent !important;
     border-color: #ff2424;
     color: #ff2424 !important;
-    transition: 0.2s;
+    transition: 0s;
+}
+
+.certificateViewer .navigator {
+    border-top: 2px solid rgb(128, 128, 128, 0.2);
 }
 
 .blocker {

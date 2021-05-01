@@ -33,6 +33,8 @@ class CertificateViewer extends Component
         this.AddChild(this.certificateViewer);
 
         this.navigator = new Component();
+        this.navigator.AddClass("navigator");
+
         this.btnPrev = new Component("button");
         this.btnPrev.GetElement().innerHTML = "Previous";
         this.btnPrev.GetElement().onpointerup = (e) => {
@@ -79,21 +81,21 @@ class CertificateViewer extends Component
 
         this.certificateViewer.Resize(availableWidth, viewerHeight);
         this.certificateViewer.Place(x, y);
-        y += this.certificateViewer.GetHeight() + CssConstants.PADDING5X;
+        y += this.certificateViewer.GetHeight() + CssConstants.PADDING3X;
 
 
-        this.navigator.Resize(availableWidth, 50);
-        this.navigator.Place(x, y);
-        y += this.navigator.GetHeight() + CssConstants.PADDING5X;
+        this.navigator.Resize(width, 80);
+        this.navigator.Place(0, y);
+        y += this.navigator.GetHeight();
         
         this.btnVerify.Resize(180, 50);
-        this.btnVerify.Place((this.navigator.GetWidth() - this.btnVerify.GetWidth()) / 2, 0);
+        this.btnVerify.Place((this.navigator.GetWidth() - this.btnVerify.GetWidth()) / 2, 15);
 
-        this.btnPrev.Resize(150, 50);
-        this.btnPrev.Place(this.btnVerify.GetLeft() - this.btnPrev.GetWidth() - CssConstants.PADDING4X, 0);
+        this.btnPrev.Resize(100, 50);
+        this.btnPrev.Place(this.btnVerify.GetLeft() - this.btnPrev.GetWidth() - CssConstants.PADDING4X, 15);
 
-        this.btnNext.Resize(150, 50);
-        this.btnNext.Place(this.btnVerify.GetLeft() + this.btnVerify.GetWidth() + CssConstants.PADDING4X, 0);
+        this.btnNext.Resize(100, 50);
+        this.btnNext.Place(this.btnVerify.GetLeft() + this.btnVerify.GetWidth() + CssConstants.PADDING4X, 15);
 
         super.Resize(width, y);
     }

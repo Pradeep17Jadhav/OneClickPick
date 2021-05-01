@@ -21,7 +21,7 @@ class CertificateSection extends Component
             1: {"index": 1, "name": "Python for Data Science", "verify": "https://courses.cognitiveclass.ai/certificates/fd349dd20d31467c9ba0705af8716cb3"},
             2: {"index": 2, "name": "The Web Developer Bootcamp", "verify": "https://www.udemy.com/certificate/UC-CBZYQHZQ/"},
             3: {"index": 3, "name": "Machine Learning with Python", "verify": "https://courses.cognitiveclass.ai/certificates/56ee20f03f334855989651e145d268b5"},
-            4: {"index": 4, "name": "Machine Learning A-Z™: Hands-On Python & R In Data Science", "verify": "https://www.udemy.com/certificate/UC-JY3QZ8YD/"},
+            4: {"index": 4, "name": "Machine Learning A-Z: Hands-On Python & R In Data Science", "verify": "https://www.udemy.com/certificate/UC-JY3QZ8YD/"},
             5: {"index": 5, "name": "Machine Learning by Andrew N.G.", "verify": "https://www.coursera.org/account/accomplishments/verify/832NRQ87FRCG"},
             6: {"index": 6, "name": "Introduction to TensorFlow for AI, ML, and DL", "verify": "https://www.coursera.org/account/accomplishments/verify/A8C7ESBQG383"},
             7: {"index": 7, "name": "Convolutional Neural Networks in TensorFlow", "verify": "https://www.coursera.org/account/accomplishments/verify/RH32NDER9VR8"},
@@ -118,7 +118,7 @@ class CertificateSection extends Component
             if(i == this.listCertificateBox.length - 1 && this.listCertificateBox.length % perLineCount != 0)
                 y += this.listCertificateBox[this.listCertificateBox.length - 1].GetHeight() + 20;
         }
-        super.Resize(width, y);
+        super.Resize(width, y + 20);
     }
 }
 
