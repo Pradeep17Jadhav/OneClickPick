@@ -71,7 +71,7 @@ class Resume extends Main
                 top = this.display.projectsSection.GetTop();
                 break;
             case "Contact":
-                top = this.display.contactSection.GetTop();
+                top = this.display.contactMeSection.GetTop();
                 break;
             default:
                 top = 0;
