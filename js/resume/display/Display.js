@@ -29,6 +29,11 @@ class Display extends Component
         this.section3.SetBackgroundImage("resources/images/section2.jpg");
         this.sectionList.push(this.section3);
         this.AddChild(this.section3);
+                
+        this.contactMeSection = new ContactMeSection();
+        this.sectionList.push(this.contactMeSection);
+        this.AddChild(this.contactMeSection);
+        
     }
 
     Resize(width, height)
@@ -53,7 +58,10 @@ class Display extends Component
         this.section3.Resize(width, SizeConstants.SECTION_HEIGHT);
         this.section3.Place(0, y);
         y += this.section3.GetHeight();        
-
+        
+        this.contactMeSection.Resize(600, 600);
+        this.contactMeSection.Place((width - this.contactMeSection.GetWidth()) / 2, y - 300);
+        y += this.contactMeSection.GetHeight() - 300;
 
         super.Resize(width, y);
     }

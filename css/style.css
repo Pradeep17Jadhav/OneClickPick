@@ -112,6 +112,37 @@ button:hover {
   transition: 0.5s ease;
 }
 
+/************************************************ SOCIAL BUTTONS START */
+
+.socialContainer {
+
+}
+.social {
+    font-size: 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.linkedin:hover {    
+    color: #0076B4;
+}
+
+.github:hover {    
+    color: #fff;
+}
+
+.facebook:hover {
+    color: #215595;
+}
+
+.instagram:hover {
+    color: #bc1888;
+}
+
+.hackerrank:hover {
+    color: #4c8300;
+}
+
 /************************************************ HEADER START */
 .header { 
     display: flex;
@@ -269,9 +300,38 @@ button:hover {
  	transition:0.5s;
 }
 
+/************************************************ CONTACT ME SECTION START */
+.contactMeSection {
+    background-color: #00E3C8;
+    color: black;
+}
+
+.contactKey {
+    color: #028a7a;
+    line-height: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.contactValue {
+    font-size: 20px;
+    line-height: 30px;
+
+    -webkit-touch-callout: text !important; /* iOS Safari */
+    -webkit-user-select: text !important; /* Safari */
+    -khtml-user-select: text !important; /* Konqueror HTML */
+        -moz-user-select: text !important; /* Old versions of Firefox */
+        -ms-user-select: text !important; /* Internet Explorer/Edge */
+            user-select: text !important; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+    
+}
 
 
 /************************************************ FOOTER SECTION START */
+
+.footer {
+}
 .footerMadeBy {
     text-align: center;
     font-size: 22px;
