@@ -103,12 +103,12 @@ class Resume extends Main
         }
     }
 
-    ShowCertificateViewer(certificateData)
+    ShowCertificateViewer(certificateData, index)
     {
-        
         this.certificateViewer.RemoveClass("hidden");
         this.certificateViewer.Show();
-        this.certificateViewer.SetCertificateData(certificateData);
+        this.certificateViewer.SetCertificateData(certificateData, index);
+        this.certificateViewer.Update(index);
         this.blocker.Show();
         
         this.Resize(this.parentEl.clientWidth, this.parentEl.clientHeight);

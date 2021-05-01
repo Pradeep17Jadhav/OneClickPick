@@ -70,7 +70,7 @@ button:hover {
     background-color: transparent;
     border-radius: 10px;
     border: 2px solid rgb(3, 160, 141, 0.3);
-    transition: 0.3s;
+    transition: 0.1s !important;
 }
 .certificateViewer button:hover{
     color: #fff;
@@ -165,6 +165,22 @@ button:hover {
 }
 
 
+.sectionTitle {
+    font-family: "Font1", "sans-serif";
+    font-size: 36px;
+    text-align: center;
+    transition: 0.5s;
+    line-height: 100%;
+}
+
+.sectionDescription {
+    font-size: 22px;
+    text-align: center;
+    transition: 0.5s;
+    line-height: 150%;
+    min-height: 10px;
+}
+
 
 /************************************************ INTRODUCTION SECTION START */
 .introductionName {
@@ -192,22 +208,6 @@ button:hover {
 /************************************************ ABOUT ME SECTION START */
 .aboutMeSection {
     background-color: #00E3C8;
-}
-
-.aboutMeTitle {
-    font-family: "Font1", "sans-serif";
-    font-size: 36px;
-    text-align: center;
-    transition: 0.5s;
-    line-height: 100%;
-}
-
-.aboutMeDescription {
-    font-size: 22px;
-    text-align: center;
-    transition: 0.5s;
-    line-height: 150%;
-    min-height: 10px;
 }
 
 
@@ -251,6 +251,7 @@ button:hover {
 /************************************************ CERTIFICATES SECTION START */
 .certificateBox {
     overflow: hidden;
+    cursor: pointer;
 }
 
 .certificate {

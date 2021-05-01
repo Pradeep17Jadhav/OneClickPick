@@ -4,6 +4,18 @@ class CertificateSection extends Component
     {
         super();
 
+        this.title = new Component();
+        this.title.AddClass(CssClassConstants.SECTION_TITLE);
+        this.title.SetFontSize(FontSizeConstants.SECTION_TITLE);
+        this.title.GetElement().innerHTML = "Certificates";
+        this.AddChild(this.title);
+
+        this.description = new Component();
+        this.description.AddClass(CssClassConstants.SECTION_DESCRIPTION);
+        this.description.GetElement().innerHTML = `Here are some of my Certificates!`;
+        this.AddChild(this.description);
+
+
         this.certificateData = {
             0: {"index": 0, "name": "Programming with Python", "verify": "https://trainings.internshala.com/verify_certificate"},
             1: {"index": 1, "name": "Python for Data Science", "verify": "https://courses.cognitiveclass.ai/certificates/fd349dd20d31467c9ba0705af8716cb3"},
@@ -19,14 +31,13 @@ class CertificateSection extends Component
             11: {"index": 11, "name": "Hackerrank JavaScript Assessment", "verify": "https://www.hackerrank.com/certificates/d2c4eeadcacc"},
         }
 
-
         this.listCertificateBox = [];
         for(let key in this.certificateData)
         {
             let i = parseInt(key);
             let certificateBox = new CertificateBox(i);
             certificateBox.GetElement().onpointerup = (e) => {
-                this.parent.parent.ShowCertificateViewer(this.certificateData[i]);
+                this.parent.parent.ShowCertificateViewer(this.certificateData, i);
             }
             this.certificateData[i]["certificateBox"] = certificateBox;
             this.AddChild(certificateBox);
@@ -37,7 +48,15 @@ class CertificateSection extends Component
     Resize(width, height)
     {
         super.Resize(width, height);
-        let y = 20;
+        let y = 50;
+        this.title.SetWidth(600);
+        this.title.Place((width - this.title.GetElement().clientWidth) / 2, y);
+        y += this.title.GetElement().clientHeight + CssConstants.PADDING3X;
+        
+        this.description.SetWidth(600);
+        this.description.Place((width - this.description.GetElement().clientWidth) / 2, y);
+        y += this.description.GetElement().clientHeight + CssConstants.PADDING7X;
+
         let thumbnailWidth, thumbnailHeight;
         let perLineCount = 0;
         for(let key in this.certificateData)
