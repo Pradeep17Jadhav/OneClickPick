@@ -14,6 +14,7 @@ class Component
         this.top = 0;
         this.width = 0;
         this.height = 0;
+        this.display = null;
         this.parent = null;
     }
 
@@ -29,16 +30,45 @@ class Component
         this.element.classList.add(cls);
     }
 
+    RemoveClass(cls)
+    {
+        this.element.classList.remove(cls);
+    }
+
     Resize(width, height)
     {
         this.SetWidth(width);
         this.SetHeight(height);
     }
 
+    Hide()
+    {
+        this.display = this.element.style.display == "" ? "block" : this.element.style.display;
+
+        this.element.style.display = "none";
+        this.visible = false;
+    }
+
+    Show()
+    {
+        this.element.style.display = this.display;
+        this.visible = true;
+    }
+
+    isVisible()
+    {
+        return this.visible;
+    }
+
     Place(left, top)
     {
         this.SetLeft(left);
         this.SetTop(top);
+    }
+
+    SetScroll(value)
+    {
+        this.element.scrollTop = value;
     }
 
     SetWidth(width)
@@ -70,17 +100,17 @@ class Component
         this.element.style.fontSize = value;
     }
 
-    BackgroundImage(path)
+    SetBackgroundImage(path)
     {
         this.element.style.backgroundImage = "url(" + path + ")";    
     }
     
-    BackgroundColor(color)
+    SetBackgroundColor(color)
     {
         this.element.style.backgroundColor = color;    
     }
 
-    BackgroundAttachment(value)
+    SetBackgroundAttachment(value)
     {
         this.element.style.backgroundAttachment = value;    
     }
@@ -103,5 +133,10 @@ class Component
     GetTop()
     {
         return this.top;
+    }
+    
+    GetLeft()
+    {
+        return this.left;
     }
 }

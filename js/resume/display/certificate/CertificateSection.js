@@ -8,6 +8,9 @@ class CertificateSection extends Component
         for(let i = 0; i < 9; i++)
         {
             let certificateBox = new CertificateBox(i);
+            certificateBox.GetElement().onpointerup = (e) => {
+                this.parent.parent.ShowCertificateViewer(i);
+            }
             this.AddChild(certificateBox);
             this.listCertificateBox.push(certificateBox);
         }
@@ -16,7 +19,7 @@ class CertificateSection extends Component
     Resize(width, height)
     {
         super.Resize(width, height);
-        let y = 0;
+        let y = 20;
         let thumbnailWidth, thumbnailHeight;
         for(let i = 0; i < this.listCertificateBox.length; i++)
         {
@@ -71,7 +74,7 @@ class CertificateSection extends Component
                 }
             }
             if(i == this.listCertificateBox.length - 1)
-                y += this.listCertificateBox[this.listCertificateBox.length - 1].GetHeight() + 10;
+                y += this.listCertificateBox[this.listCertificateBox.length - 1].GetHeight() + 20;
         }
         super.Resize(width, y);
     }
@@ -87,7 +90,7 @@ class CertificateBox extends Component
         this.certificate = new Certificate();
         this.certificate.SetCourseName("Introduction to TensorFlow");
         this.certificate.SetPlatform("Coursera");
-        this.certificate.SetBackgroundImage("resources/certificates/thumbnail_" + (certIndex + 1) + ".jpg");
+        this.certificate.SetCertificateImage("resources/certificates/thumbnails/thumbnail_" + (certIndex + 1) + ".jpg");
         this.AddChild(this.certificate);
     }
 
